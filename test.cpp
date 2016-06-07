@@ -21,7 +21,7 @@ int main()
 	Serial_Comm comm1;
 
 	comm1.Open_Port("/dev/ttyAMA0");
-	comm1.Initialize_Port();
+	comm1.Initialize_Port(B9600);
 
 	for(;;)
 	{

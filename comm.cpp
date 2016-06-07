@@ -20,6 +20,9 @@ Version: 00
 #include "comm.h"
 #include "queue.h"
 
+using std::cout;
+using std::endl;
+
 Serial_Comm::Serial_Comm()
 :port_status(false)
 {}
@@ -190,7 +193,7 @@ void Serial_Comm::Send_Data(std::string data)
 void Serial_Comm::Send_Data(unsigned int data)
 {
 	send_queue.push(std::to_string(data));
-	cout << std::tostring(data) << endl;
+	//cout << std::tostring(data) << endl;
 }
 
 void Serial_Comm::Read_Port()
