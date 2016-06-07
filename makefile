@@ -1,6 +1,6 @@
 CC = g++
-
-CFLAGS = -Wall -std=c++11 -pthread
+INCL=-I/usr/local/include/
+CFLAGS = -Wall -std=c++11 -pthread $(INCL)
 
 default: test
 

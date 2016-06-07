@@ -158,7 +158,8 @@ void Serial_Comm::Read_Packet()
 
 std::string Serial_Comm::Read_Data()
 {
-	return read_queue.pop();
+	//if (!read_queue.empty());
+		return read_queue.pop();
 }
 
 bool Serial_Comm::Read_Empty()
@@ -203,6 +204,7 @@ void Serial_Comm::Read_Port()
 	int i;
 	//char *buf = new char[LENGTH];
 	char buf[LENGTH];
+
 	//std::string buf;
 	int retval;
 	struct timeval tv;	// Time parameter structure for select() 
@@ -237,7 +239,8 @@ void Serial_Comm::Read_Port()
 	// Select() sees data on port
 	else if(retval)
 	{
-		i = read(fd, buf, LENGTH);
+		//i = read(fd, buf, LENGTH);
+		i = read(fd, buf, 1);
 		
 		buf[i] = '\0';
 		
@@ -245,7 +248,7 @@ void Serial_Comm::Read_Port()
 			perror("read() Failed"); 
 
 		std::string packet(buf);
-		std::cout << "read: " << packet << std::endl;
+		//std::cout << "read: " << packet << std::endl;
 		//std::cout << "len: " << packet.length() << std::endl;
 		read_queue.push(packet);
 		
