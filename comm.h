@@ -20,7 +20,7 @@ Version: 00
 //#define BAUD_RATE B9600
 
 
-//#define SERIAL_PORT "/dev/ttyO4"
+//#define SERIAL_PORT "/dev/ttyAMA0"
 
 class Serial_Comm
 {
