@@ -20,7 +20,7 @@ int main()
 {
 	Serial_Comm comm1;
 
-	comm1.Open_Port("/dev/ttyO4");
+	comm1.Open_Port("/dev/ttyAMA0");
 	comm1.Initialize_Port();
 
 	for(;;)
