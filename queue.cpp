@@ -1,6 +1,6 @@
 /*
 Purpose: Class definitions for queue 
- Author: Josh Osborne
+ Author: Natesh Narain
 */
 
 #include "queue.h"
